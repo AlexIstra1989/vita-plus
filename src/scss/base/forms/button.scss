@@ -2,10 +2,20 @@
 // Снипет (HTML): btn
 
 .button {
+ @include adaptiveValue("font-size", 16, 12);
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: 20px 50px;
+ color: $primaryColor;
+ background-color: $accentColor;
+ border-radius: 50px;
+ border: 1px solid transparent;
+ transition: all 0.7s;
+ cursor: pointer;
 	@media (any-hover: hover) {
 		&:hover {
+   border-color: $accentColor;
+   color: $accentColor;
+   background-color: $primaryColor;
 		}
 	}
 	&._fw {

@@ -1,3 +1,78 @@
+.application {
+ // .application__inner
+ &__inner {
+  display: flex;
+  align-items: center;
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .application__box
+ &__box {
+  max-width: rem(500);
+  width: 100%;
+  margin-right: rem(20);
+  @media (max-width: $tablet) {
+   order: 1;
+   margin-right: 0;
+   text-align: center;
+  }
+ }
+ // .application__title
+ &__title {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 40, 20);
+  @include adaptiveValue("margin-bottom", 40, 20);
+  line-height: math.div(48, 40);
+  span {
+   color: $accentColor;
+  }
+ }
+ // .application__text
+ &__text {
+  @include adaptiveValue("font-size", 16, 12);
+  @include adaptiveValue("margin-bottom", 80, 20);
+  line-height: math.div( 24, 16);
+ }
+ // .application__links
+ &__links {
+  display: flex;
+  @include adaptiveValue("gap", 20, 10);
+  @media (max-width: $mobileSmall) {
+   flex-direction: column;
+  }
+ }
+ // .application__link
+ &__link {
+  // .header__link_white
+  &_white {
+   background-color: $primaryColor;
+   color: $accentColor;
+   border-color: $accentColor;
+  }
+  @media (max-width: $mobileSmall) {
+   justify-content: center;
+  }
+ }
+ // .application__image
+ &__image-ibg_contain {
+  max-width: rem(640);
+  width: 100%;
+  @include adaptiveValue("height", 540, 200);
+  @media (max-width: $tablet) {
+   margin-bottom: rem(15);
+  }
+ }
+}
 //====================================================================================================
-
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
+//====================================================================================================
 //====================================================================================================
