@@ -1,4 +1,7 @@
 .application {
+ background-color: $primaryColor;
+ border-bottom-left-radius: rem(40);
+ border-bottom-right-radius: rem(40);
  // .application__inner
  &__inner {
   display: flex;
@@ -108,9 +111,106 @@
   line-height: math.div(32, 16);
  }
 }
-
-
 //====================================================================================================
+.about {
+ @include adaptiveValue("padding-bottom", 100, 30);
+ // .about__container
+ &__container {
+ }
+ // .about__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+   margin-bottom: rem(30);
+  }
+ }
+ // .about__image
+ &__image {
+  margin-right: rem(20);
+  @media (max-width: $tablet) {
+   max-width: rem(375);
+   margin: 0 auto rem(20);
+  }
+ }
+ // .about__content
+ &__content {
+  max-width: rem(660);
+  width: 100%;
+  @media (max-width: $tablet) {
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+  }
+ }
+ // .about__subtitle
+ &__subtitle {
+  @include adaptiveValue("font-size", 14, 10);
+  color: $secondaryColor;
+  line-height: math.div(17, 14);
+  margin-bottom: rem(20);
+ }
+ // .about__title
+ &__title {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 40, 20);
+  @include adaptiveValue("margin-bottom", 40, 10);
+  line-height: math.div(56, 40); 
+  span {
+   color: $accentColor;
+  }
+ }
+ // .about__text
+ &__text {
+  @include adaptiveValue("font-size", 16, 12);
+  @include adaptiveValue("margin-bottom", 40, 20);
+  line-height: math.div(24, 16);
+  @media (max-width: $tablet) {
+   order: 2;
+  }
+ }
+ // .about__link
+ &__link {
+  width: rem(190);
+  @media (max-width: $tablet) {
+   order: 2;
+  }
+  @media (max-width: $mobileSmall) {
+   width: 100%;
+  }
+ }
+ // .about__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 260px));
+  justify-content: end;
+  gap: rem(40);
+  margin-top: rem(-100);
+  @media (max-width: $tablet) {
+   margin-top: 0;
+   justify-content: center;
+  }
+ }
+ // .about__item
+ &__item {
+  background-color: $primaryColor;
+  border-radius: rem(40);
+  padding: rem(40);
+  border: rem(1) solid $mainColor; 
+ }
+ // .about__num
+ &__num {
+  @include adaptiveValue("font-size", 40, 20);
+  line-height: math.div(56, 40);
+  color: $accentColor;
+  margin-bottom: rem(10);
+ }
+ // .about__item-name
+ &__item-name {
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(24, 16);
+ }
+}
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================
