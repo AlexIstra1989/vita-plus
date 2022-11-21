@@ -2,3 +2,11 @@
 body {
  background-image: url("../img/bg-page.jpg");
 }
+
+.title {
+ font-weight: 700;
+ @include adaptiveValue("margin-bottom", 40, 20);
+ @include adaptiveValue("font-size", 40, 20);
+ line-height: math.div(56, 40);
+ text-align: left;
+}
