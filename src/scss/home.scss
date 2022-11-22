@@ -321,6 +321,114 @@
  }
 }
 //====================================================================================================
+.doctors {
+ @include adaptiveValue("padding-bottom", 100, 30);
+ text-align: center;
+ @media (max-width: $mobileSmall) {
+  text-align: left;
+ }
+ &__container {
+  position: relative;
+ }
+ // .doctors__title
+ &__title {
+ }
+ // .doctors__slider
+ &__slider {
+  @include adaptiveValue("margin-bottom", 50, 30);
+ }
+ // .doctors__wrapper
+ &__wrapper {
+ }
+ // .doctors__slide
+ &__slide {
+ }
+ // .doctors__item
+ &__item {
+  @include adaptiveValue("padding", 40, 30);
+  text-align: center;
+  border: rem(1) solid $mainColor;
+  border-radius: rem(50);
+  cursor: pointer;
+ }
+ // .doctors__foto
+ &__foto {
+  margin-bottom: rem(20);
+ }
+ // .doctors__name
+ &__name {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(24, 16);
+  @include adaptiveValue("margin-bottom", 20, 10);
+ }
+ // .doctors__position
+ &__position {
+  display: block;
+  @include adaptiveValue("font-size", 14, 12);
+  @include adaptiveValue("margin-bottom", 30, 20);
+  line-height: math.div(21, 14);
+  color: $accentColor;
+ }
+ // .doctors__more
+ &__more {
+ }
+ // .doctors__buttons 
+ &__buttons {
+  display: flex;
+  @include adaptiveValue("gap", 20, 5);
+  position: absolute;
+  top: 0;
+  right: rem(15);
+  @media (max-width: 600px) {
+   top: rem(-15);
+  }
+  @media (max-width: $mobileSmall) {
+   top: 88%;
+  }
+ }
+ // .doctors__link 
+ &__link {
+  transition: all 0.5s;
+  &:hover {
+   background-color: $accentColor;
+   color: $primaryColor;
+  }
+ }
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+ width: rem(60);
+ height: rem(60);
+ background-color: $accentColor;
+ border-radius: 50%;
+ position: relative;
+ cursor: pointer;
+ &::before {
+  @include pseudo;
+  @include background(url("../img/icons/arrow.svg"));
+  width: rem(18);
+  height: rem(15);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+ }
+}
+
+.swiper-button-prev::before {
+ transform: translate(-50%, -50%) rotate(-180deg);
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+.button {
+}
+
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================
