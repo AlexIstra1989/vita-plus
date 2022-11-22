@@ -212,6 +212,114 @@
  }
 }
 //====================================================================================================
+.consultation {
+ @include adaptiveValue("padding-bottom", 100, 30);
+ // .consultation__inner
+ &__inner {
+  @include adaptiveValue("padding-left", 60, 20);
+  @include adaptiveValue("padding-right", 60, 20);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: $accentColor;
+  border-radius: rem(40);
+  height: rem(475);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+   height: auto;
+   padding-top: rem(30);
+  }
+ }
+ // .consultation__content
+ &__content {
+  max-width: rem(515);
+  width: 100%;
+  color: $primaryColor;
+  margin-right: rem(20);
+  @media (max-width: $tablet) {
+   max-width: 100%;
+   margin-right: 0;
+   text-align: center;
+  }
+ }
+ // .consultation__title
+ &__title {
+  @include adaptiveValue("margin-bottom", 40, 20);
+  span {
+   color: $mainColor;
+  }
+  @media (max-width: $tablet) {
+   text-align: center;
+  }
+ }
+ // .consultation__text
+ &__text {
+  @include adaptiveValue("font-size", 16, 12);
+  @include adaptiveValue("margin-bottom", 60, 20);
+  line-height: math.div(24, 16);
+  max-width: rem(462);
+  width: 100%;
+  @media (max-width: $tablet) {
+   max-width: 100%;
+  }
+ }
+ // .consultation__phone 
+ &__phone {
+  border-bottom: 1px solid $primaryColor;
+ }  
+ // .consultation__links
+ &__links {
+  display: flex;
+  gap: rem(20);
+  @media (max-width: $tablet) {
+   justify-content: center;
+  }
+  @media (max-width: 530px) {
+   flex-direction: column;
+  }
+ }
+ // .consultation__link
+ &__link {
+  @include adaptiveValue("padding-top", 20, 12);
+  @include adaptiveValue("padding-bottom", 20, 12);
+  padding-left: rem(50);
+  padding-right: rem(50);
+  border-radius: rem(50);
+  max-width: rem(230);
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  // .consultation__link_white
+  &_white {
+   color: $mainColor;
+   border: rem(2) solid $mainColor;
+  }
+  // .consultation__link_black
+  &_black {
+   color: $accentColor;
+   background-color: $mainColor;
+   text-align: center;
+  }
+  @media (max-width: 530px) {
+   max-width: 100%;
+  }
+ }
+ //.consultation__image
+ &__image {
+  height: rem(618);
+  margin-top: rem(34);
+  @media (max-width: $tablet) {
+   margin-top: rem(-54);
+   margin-bottom: rem(-87);
+  }
+  @media (max-width: 530px) {
+   width: 100%;
+   height: rem(321);
+   margin-top: rem(-28);
+   margin-bottom: rem(-45);
+  }
+ }
+}
 //====================================================================================================
 //====================================================================================================
 //====================================================================================================

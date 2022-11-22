@@ -3,7 +3,8 @@
 
 .button {
  @include adaptiveValue("font-size", 16, 12);
-	display: inline-flex;
+	line-height: math.div(20, 16);
+ display: inline-flex;
 	padding: 20px 50px;
  color: $primaryColor;
  background-color: $accentColor;
