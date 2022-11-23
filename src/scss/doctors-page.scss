@@ -1,0 +1,49 @@
+.doctors {
+ // .doctors__container
+ &__container {
+ }
+ // .doctors__title
+ &__title {
+ }
+ // .doctors__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  @include adaptiveValue("gap", 40, 20);
+  @media (max-width:$mobile) {
+   display: none;
+  }
+ }
+ // .doctors__item
+ &__item {
+ }
+ // .doctors__foto
+ &__foto {
+ }
+ // .doctors__name
+ &__name {
+ }
+ // .doctors__position
+ &__position {
+ }
+ // .doctors__more
+ &__more {
+ }
+}
+//====================================================================================
+.doctors-page {
+ &__slider {
+  display: none;
+  @media (max-width: $mobile) {
+   display: block;
+  }
+ }
+ &__buttons {
+  @media (max-width: $mobileSmall) {
+   top: 102% !important;
+   left: 50%;
+   transform: translateX(-50%);
+   justify-content: center;
+  }
+ }
+}

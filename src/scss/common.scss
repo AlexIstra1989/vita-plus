@@ -6,3 +6,21 @@
  line-height: math.div(56, 40);
  text-align: left;
 }
+
+.breadcrumbs {
+ @include adaptiveValue("padding-top", 90, 40);
+ @include adaptiveValue("padding-bottom", 30, 20);
+ @include adaptiveValue("font-size", 14, 10);
+ line-height: math.div(15, 10);
+ color: $secondaryColor;
+ // .breadcrumbs__list
+ &__list {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+ }
+ // .breadcrumbs__link
+ &__link {
+  border-bottom: rem(1) solid $secondaryColor;
+ }
+}
