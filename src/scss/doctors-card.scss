@@ -1,0 +1,94 @@
+.profile {
+ @include adaptiveValue("padding-top", 30, 10);
+ // .profile__container
+ &__container {
+ }
+ // .profile__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+ }
+ // .profile__info
+ &__info {
+  @include adaptiveValue("font-size",16 , 12);
+  line-height: math.div(24, 16);
+  max-width: rem(660);
+  width: 100%;
+  margin-right: rem(20);
+  @media (max-width: $tablet) {
+   display: flex;
+   flex-direction: column;
+   max-width: 100%;
+  }
+ }
+ // .profile__title
+ &__title {
+  margin-bottom: rem(20);
+  max-width: rem(620);
+  width: 100%;
+  @media (max-width: $tablet) {
+   max-width: 100%;
+  }
+ }
+ // .profile__position
+ &__position {
+  @include adaptiveValue(" margin-bottom", 40, 20);
+  display: block;
+  color: $accentColor;
+ }
+ // .profile__text
+ &__text {
+  @include adaptiveValue("margin-bottom", 48, 20);
+  @media (max-width: $tablet) {
+   order: 2;
+  }
+ }
+ // .profile__link
+ &__link {
+  @media (max-width: $tablet) {
+   order: 2;
+   max-width: rem(270);
+   width: 100%;
+  }
+  @media (max-width: $mobileSmall) {
+   max-width: 100%;
+  }
+ }
+ // .profile__image
+ &__image {
+  @media (max-width: $tablet) {
+   margin-bottom: rem(20);
+  }
+ }
+}
+//=================================================================
+.education {
+ @include adaptiveValue("padding-top", 64, 40);
+ @include adaptiveValue("padding-bottom", 80, 40);
+ // .education__title
+ &__title {
+  margin-bottom: rem(20);
+ }
+ // .education__item
+ &__item {
+  display: flex;
+  align-items: center;
+  padding: rem(20);
+  gap: rem(20);
+  &:not(:last-child) {
+   border-bottom: rem(1) solid rgba(15, 47, 46, 0.15);
+  }
+ }
+ // .education__year
+ &__year {
+  @include adaptiveValue("font-size", 40, 20);
+  line-height: math.div(56, 40);
+  color: $accentColor;
+  margin-right: auto;
+ }
+ // .education__text
+ &__text {
+  max-width: rem(860);
+  width: 100%;
+ }
+}

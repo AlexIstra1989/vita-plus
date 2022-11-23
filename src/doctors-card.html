@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Врачи"
+})
+
+<body>
+ <div class="wrapper">
+  @@include('html/_header.htm',{})
+  <main class="page">
+   <div class="breadcrumbs">
+    <div class="breadcrumbs__container">
+     <ul class="breadcrumbs__list">
+      <li class="breadcrumbs__item">
+       <a class="breadcrumbs__link" href="#">главная</a>
+      </li>
+      >
+      <li class="breadcrumbs__item">
+       <a class="breadcrumbs__link" href="#">врачи</a>
+      </li>
+      >
+      <li class="breadcrumbs__item">
+       <a class="breadcrumbs__current" href="#">Константинопольский
+        Константин Владимирович</a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <section class="profile">
+    <div class="profile__container">
+     <div class="profile__inner">
+      <div class="profile__info">
+       <h1 class="profile__title title">Константинопольский Константин Владимирович</h1>
+       <span class="profile__position">врач-стоматолог, хирург</span>
+       <p class="profile__text">Александр Андреевич - врач-стоматолог-хирург Центра Стоматологии Vita + и специалист
+        высокого уровня в области хирургической стоматологии, обладающий большим опытом работы. Основная специализации
+        Александра Андреевича - это атравматичное и сложное удаление зубов. Такому специалисту можно доверить сложные
+        ситуации, не боясь осложнений, благодаря владению последними технологиями в области хирургии.</p>
+       <a class="profile__link button" href="#">Записаться на прием</a>
+      </div>
+      <img data-da=".profile__info, 991.98" class="profile__image" src="img/profile/image-1.jpg" alt="#">
+     </div>
+     <div class="profile__education education">
+      <h2 class="education__title title">Основное образование:</h2>
+      <div class="education__item">
+       <span class="education__year">2015</span>
+       <p class="education__text">Диплом о техническом и профессиональном образовании с отличием от ГККП Костанайский
+        медицинский колледж по специальности «Стоматология» (г. Астана).</p>
+      </div>
+      <div class="education__item">
+       <span class="education__year">2016</span>
+       <p class="education__text">Диплом специалиста КрасГМУ им.профессора В.Ф Войно-Ясенецкого Минздрава России по
+        специальности "Стоматология", квалификации "Врач-стоматолог".</p>
+      </div>
+     </div>
+    </div>
+   </section>
+  </main>
+  @@include('html/_footer.htm',{})
+ </div>
+ @@include('html/_popup.htm',{})
+ @@include('html/_js.htm',{})
+</body>
+
+</html>

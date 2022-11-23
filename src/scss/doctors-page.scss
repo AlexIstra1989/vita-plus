@@ -1,10 +1,4 @@
 .doctors {
- // .doctors__container
- &__container {
- }
- // .doctors__title
- &__title {
- }
  // .doctors__items
  &__items {
   display: grid;
@@ -13,21 +7,6 @@
   @media (max-width:$mobile) {
    display: none;
   }
- }
- // .doctors__item
- &__item {
- }
- // .doctors__foto
- &__foto {
- }
- // .doctors__name
- &__name {
- }
- // .doctors__position
- &__position {
- }
- // .doctors__more
- &__more {
  }
 }
 //====================================================================================
