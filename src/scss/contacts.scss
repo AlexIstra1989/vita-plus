@@ -1,0 +1,75 @@
+.contacts {
+ @include adaptiveValue("padding-bottom", 80, 40);
+ // .contacts__inner
+ &__inner {
+  display: flex;
+  justify-content: space-between;
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .contacts__info
+ &__info {
+  margin-bottom: rem(40);
+  margin-right: rem(30);
+  @media (max-width: $tablet) {
+   margin: 0 auto rem(40);
+  }
+ }
+ // .contacts__list 
+ &__list {
+  @include adaptiveValue("margin-bottom", 60, 40);
+ }
+ // .contacts__item
+ &__item {
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(21, 16);
+  padding: rem(20) 0 rem(20) rem(35);
+  position: relative;
+  &::before {
+   @include pseudo;
+   left: 0;
+   width: rem(16);
+   height: rem(16);
+  }
+  &:not(:last-child) {
+   border-bottom: rem(1) solid rgba(15, 47, 46, 0.08);
+  }
+  // .contacts__item_location
+  &_location::before {
+   @include background(url("../img/icons/location.svg"));
+   height: rem(23);
+   top: rem(18);
+   background-size: cover;
+  }
+  // .contacts__item_time
+  &_time::before {
+   @include background(url("../img/icons/time.svg"));
+   top: rem(21);
+  }
+  // .contacts__item_email
+  &_email::before {
+   @include background(url("../img/icons/letter.svg"));
+   height: rem(14);
+   top: rem(24);
+  }
+  // .contacts__item_phone
+  &_phone::before {
+   @include background(url("../img/icons/phone.svg"));
+   height: rem(23);
+   top: rem(18);
+  }
+ }
+ // .contacts__map
+ &__map {
+  border-radius: rem(40);
+  @media (max-width: $tablet) {
+   width: 100%;
+  }
+ }
+}
+//=============================================================================================
+.social {
+ display: flex;
+ gap: rem(30);
+}

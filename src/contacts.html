@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="ru">
+@@include('html/_head.htm',{
+"title":"Контакты"
+})
+
+<body>
+ <div class="wrapper">
+  @@include('html/_header.htm',{})
+  <div class="breadcrumbs">
+   <div class="breadcrumbs__container">
+    <ul class="breadcrumbs__list">
+     <li class="breadcrumbs__item">
+      <a class="breadcrumbs__link" href="#">главная</a>
+     </li>
+     >
+     <li class="breadcrumbs__item">
+      <a class="breadcrumbs__current" href="#">контакты</a>
+     </li>
+    </ul>
+   </div>
+  </div>
+  <main class="page">
+   <section class="contacts">
+    <div class="contacts__container">
+     <h1 class="contacts__title title">Контакты</h1>
+     <div class="contacts__inner">
+      <div class="contacts__info">
+       <ul class="contacts__list">
+        <li class="contacts__item contacts__item_location">
+         <address class="contacts__location">
+          г. Красноярск, ул. Академика Киренского 25а
+         </address>
+        </li>
+        <li class="contacts__item contacts__item_time">
+         Пн-пт 10:00-18:00
+        </li>
+        <li class="contacts__item contacts__item_email">
+         <a href="mailto:info@vitaplus.ru" class="contacts__email">info@vitaplus.ru</a>
+        </li>
+        <li class="contacts__item contacts__item_phone">
+         <a href="tel:+79999999999" class="contacts__phone">+7 (999) 999-99-99</a>
+        </li>
+       </ul>
+       <ul class="contacts__social social">
+        <li class="social__item">
+         <img class="social__logo" src="img/social/vk.svg" alt="#">
+        </li>
+        <li class="social__item">
+         <img class="social__logo" src="img/social/inst.svg" alt="#">
+        </li>
+        <li class="social__item">
+         <img class="social__logo" src="img/social/fb.svg" alt="#">
+        </li>
+       </ul>
+      </div>
+      <iframe class="contacts__map"
+       src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2230.783167290282!2d92.7986701515788!3d56.00510848052642!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5cd7ad927ae1afff%3A0xe9f620096057372d!2z0YPQuy4g0JDQutCw0LTQtdC80LjQutCwINCa0LjRgNC10L3RgdC60L7Qs9C-LCAyNdCwLCDQmtGA0LDRgdC90L7Rj9GA0YHQuiwg0JrRgNCw0YHQvdC-0Y_RgNGB0LrQuNC5INC60YDQsNC5LCA2NjAxMDA!5e0!3m2!1sru!2sru!4v1669381877454!5m2!1sru!2sru"
+       width="560" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+       referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+     </div>
+    </div>
+   </section>
+   <section class="consultation">
+    <div class="consultation__container">
+     <div class="consultation__inner">
+      <div class="consultation__content">
+       <h2 class="consultation__title title">Консультация, снимок 
+        и план лечения <span>бесплатно</span></h2>
+       <p class="consultation__text">Укажите свой номер телефона, мы перезвоним и 
+        подберём для вас удобное время приёма. Или позвоните нам сами — <a class="consultation__phone" href="tel:+74999555067">+7 499 955-50-67</a></p>
+       <div class="consultation__links">
+        <a href="" class="consultation__link consultation__link_white button">Телефон</a>
+        <a href="" class="consultation__link consultation__link_black button">Оставить заявку</a>
+       </div>
+      </div>
+      <img class="consultation__image" src="img/consultation/image-1.png" alt="#">
+     </div>
+    </div>
+   </section>
+  </main>
+  @@include('html/_footer.htm',{})
+ </div>
+ @@include('html/_popup.htm',{})
+ @@include('html/_js.htm',{})
+</body>
+
+</html>
