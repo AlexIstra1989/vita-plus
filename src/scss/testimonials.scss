@@ -1,0 +1,196 @@
+.testimonials {
+ @include adaptiveValue("padding-bottom", 70, 40);
+ // .testimonials__items
+ &__items {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
+  @include adaptiveValue("gap", 40, 10);
+  padding-bottom: rem(20);
+  @media (max-width: $mobileSmall) {
+   display: flex;
+   flex-direction: column;
+  }
+ }
+ // .testimonials__item
+ &__item {
+  @include adaptiveValue("padding-top", 50, 30);
+  @include adaptiveValue("padding-bottom", 50, 30);
+  @include adaptiveValue("padding-left", 60, 15);
+  @include adaptiveValue("padding-right", 60, 15);
+  border: rem(1) solid $mainColor;
+  border-radius: rem(40);
+ }
+ // .testimonials__author
+ &__author {
+  font-weight: 700;
+  @include adaptiveValue("font-size", 22, 14);
+  line-height: math.div(33, 22);
+  @include adaptiveValue("margin-bottom", 20, 10);
+ }
+ // .testimonials__box
+ &__box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: rem(20);
+ }
+ // .testimonials__date
+ &__date {
+  @include adaptiveValue("font-size", 14, 10);
+  line-height: math.div(18, 14);
+  color: $secondaryColor;
+ }
+ // .testimonials__text
+ &__text {
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(21, 16);
+ }
+ // .testimonials__more
+ &__more {
+  @include adaptiveValue("padding-top", 20, 12);
+  @include adaptiveValue("padding-bottom", 20, 12);
+  @include adaptiveValue("padding-right", 50, 30);
+  @include adaptiveValue("padding-left", 50, 30);
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(20, 16);
+  border: rem(1) solid $accentColor;
+  border-radius: rem(50);
+  color: $accentColor;
+  display: block;
+  margin: 0 auto;
+ }
+}
+//=================================================================================================
+.reviews {
+ @include adaptiveValue("padding-bottom", 70, 40);
+ // .reviews__inner 
+ &__inner {
+  @include adaptiveValue("padding-top", 60, 30);
+  @include adaptiveValue("padding-bottom", 60, 30);
+  @include adaptiveValue("padding-left", 60, 20);
+  @include adaptiveValue("padding-right", 60, 20);
+  background-color: $accentColor;
+  border-radius: rem(40)
+ }
+ // .reviews__top
+ &__top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: $primaryColor;
+  @include adaptiveValue("margin-bottom", 40, 30);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+   align-items: flex-start;
+  }
+ }
+ // .reviews__title
+ &__title {
+  margin-bottom: 0;
+  margin-right: rem(20);
+  @media (max-width: $tablet) {
+   margin-bottom: rem(20);
+  }
+ }
+ // .reviews__text
+ &__text {
+  @include adaptiveValue("font-size", 14, 12);
+  line-height: math.div(21, 14);
+  max-width: rem(600);
+  width: 100%;
+  @media (max-width: $tablet) {
+   max-width: 100%;
+  }
+ }
+ // .reviews__form
+ &__form {
+  display: flex;
+  @include adaptiveValue("gap", 40, 10);
+  @media (max-width: $tablet) {
+   flex-direction: column;
+  }
+ }
+ // .reviews__fields
+ &__fields {
+  display: flex;
+  flex-direction: column;
+  @include adaptiveValue("gap", 20, 10);
+  max-width: rem(400);
+  width: 100%;
+  @media (max-width: $tablet) {
+   max-width: 100%;
+  }
+ }
+ // .reviews__field
+ &__field {
+  background-color: transparent;
+  border: rem(2) solid $mainColor;
+  border-radius: rem(40);
+  padding: rem(20) rem(20) rem(20) rem(50);
+  cursor: pointer;
+  transition: all 0.7s;
+  &:hover {
+   border-color: $secondaryColor;
+  }
+  &::placeholder {
+   font-weight: 700;
+   @include adaptiveValue("font-size", 16, 12);
+   line-height: math.div(21, 16);
+   color: $mainColor;
+  }
+ }
+ // .reviews__textarea
+ &__textarea {
+  font-weight: 700;
+  background-color: transparent;
+  border: rem(2) solid $mainColor;
+  border-radius: rem(40);
+  @include adaptiveValue("font-size", 16, 12);
+  line-height: math.div(21, 16);
+  @include adaptiveValue("padding-top", 20, 12);
+  @include adaptiveValue("padding-bottom", 80, 70);
+  @include adaptiveValue("padding-left", 50, 45);
+  @include adaptiveValue("padding-right", 20, 20);
+  @include adaptiveValue("margin-bottom", 20, 10);
+  width: 100%;
+  resize: none;
+  cursor: pointer;
+  transition: all 0.7s;
+  &:hover {
+   border-color: $secondaryColor;
+  }
+ }
+ // .reviews__request
+ &__request {
+  display: flex;
+  gap: rem(30);
+  @media (max-width: $tablet) {
+   justify-content: space-between;
+  }
+  @media (max-width: $mobile) {
+   flex-direction: column;
+  }
+ }
+ // .reviews__button
+ &__button {
+  background-color: $mainColor;
+  color: $accentColor;
+  @media (max-width: $mobile) {
+   justify-content: center;
+  }
+ }
+ // .reviews__data
+ &__data {
+  @include adaptiveValue("font-size", 14, 12);
+  line-height: math.div(21, 14);
+  color: $primaryColor;
+  max-width: rem(340);
+  width: 100%;
+  span {
+   text-decoration: underline;
+  }
+  @media (max-width: $mobile) {
+   max-width: 100%;
+  }
+ }
+}

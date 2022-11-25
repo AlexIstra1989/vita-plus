@@ -53,7 +53,7 @@ flsFunctions.spollers();
 Документация: https://template.fls.guru/template-docs/modul-pokazat-eshhjo.html
 Сниппет (HTML): showmore
 */
-// flsFunctions.showMore();
+flsFunctions.showMore();
 
 /*
 Попапы
@@ -86,7 +86,7 @@ import * as flsForms from "./files/forms/forms.js";
 // flsForms.formQuantity();
 
 /* Модуль звездного рейтинга */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль работы с select. */
 // import './libs/select.js'
